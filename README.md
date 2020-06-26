@@ -72,32 +72,7 @@
 - 本地启动：npm run serve
 - 生产启动：npm run build
 
-## 4.删除 index.html 中不需要的代码
-
-```html
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <title>
-      <%= htmlWebpackPlugin.options.title %>
-    </title>
-  </head>
-  <body>
-    <noscript>
-      <strong>Please enable JavaScript to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-  </body>
-</html>
-```
-
-## 5.自定义导航条
+## 4.自定义导航条
 
 - 当某些页面需要去掉导航条撑满全屏时使用，此时页面内元素会上移到顶部
 - 需要对导航条高度做适配处理
@@ -136,10 +111,22 @@ export default {
 </view>
 ```
 
-## 6.使用 vant weapp 组件库
+## 5.使用 vant weapp 组件库
 
 - 在 package.json 中添加 "postinstall": "bower install"和 bower 依赖
 - 新建.bowerrc，bower.json 文件
 - 在 pages.json 中使用 usingComponents 对组件进行引入
 - .gitignore 中添加 wxcomponents/
+- 在 App.vue 中引入 vant weapp 内置样式 @import '/wxcomponents/vant/common/index.wxss';
 - 当 npm i 时会自动生成 wxcomponents 文件夹
+
+## 6.使用 scss
+
+- 安装依赖 sass，sass-loader
+
+## 7.封装 axios 请求
+
+- 安装依赖：axios，axios-miniprogram-adapter
+- 需到后台设置允许请求域名
+
+## 8.使用vuex

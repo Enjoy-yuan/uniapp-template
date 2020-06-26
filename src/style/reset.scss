@@ -1,0 +1,36 @@
+// flex布局
+.flex {
+  display: flex;
+}
+
+// 垂直居中
+.align-item-center {
+  align-items: center;
+}
+
+// 水平居中
+.justify-content-center {
+  justify-content: center;
+}
+
+// 水平垂直居中
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 换行
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+// 垂直排列
+.flex-column {
+  flex-direction: column;
+}
+
+// 文字水平居中
+.text-center {
+  text-align: center;
+}

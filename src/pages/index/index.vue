@@ -1,9 +1,7 @@
 <template>
   <view class="content">
-    12345678
-    <image class="logo" src="../../static/logo.png"></image>
-    <view>
-      <text class="title">{{ title }}</text>
+    <view class="aaa">
+      <view class="bbb">3453535</view>
     </view>
   </view>
 </template>
@@ -20,18 +18,13 @@ export default Vue.extend({
 });
 </script>
 
-<style>
-.content {
-  text-align: center;
-  height: 400upx;
-}
-.logo {
-  height: 200upx;
-  width: 200upx;
-  margin-top: 200upx;
-}
-.title {
-  font-size: 36upx;
-  color: #8f8f94;
+<style lang="scss">
+.aaa {
+  .bbb {
+    width: 500upx;
+    height: 500upx;
+    background: url("/static/logo.png") no-repeat;
+    color: $uni-color-success;
+  }
 }
 </style>
