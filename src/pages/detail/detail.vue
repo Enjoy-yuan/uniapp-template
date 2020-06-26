@@ -11,22 +11,27 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
       bookingInfo: {},
     };
   },
+  computed: {
+    ...mapState(["login"]),
+  },
   async mounted() {
-    this.bookingInfo = (
-      await this.$api.getBookingInfo(
-        {
-          clnVisitId: 1116544549750001,
-        },
-        "POST"
-      )
-    ).bookingInfo;
-    console.log(this.bookingInfo);
+    console.log(this.login);
+    // this.bookingInfo = (
+    //   await this.$api.getBookingInfo(
+    //     {
+    //       clnVisitId: 1116544549750001,
+    //     },
+    //     "POST"
+    //   )
+    // ).bookingInfo;
+    // console.log(this.bookingInfo);
   },
 };
 </script>

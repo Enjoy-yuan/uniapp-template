@@ -129,4 +129,13 @@ export default {
 - 安装依赖：axios，axios-miniprogram-adapter
 - 需到后台设置允许请求域名
 
-## 8.使用vuex
+## 8.使用 vuex
+
+- 新建文件夹 store，新建文件 index.js，在 main.js 中引入并挂载到 vue 上
+
+```js
+// main.js
+import store from "./store";
+
+Vue.prototype.$store = store;
+```
