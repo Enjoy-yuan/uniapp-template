@@ -1,19 +1,19 @@
-# my-project
+# try-uniapp
 
 ## 1.命令行创建 uniapp 项目
 
-- 输入命令：vue create -p dcloudio/uni-preset-vue my-project
+- 输入命令：vue create -p dcloudio/uni-preset-vue try-uniapp
 - 选择模板：默认模板（Typescript）
 
 ## 2.删除 package.json 中不需要的命令和依赖
 
-- 安装依赖使用 npm，使用 cnpm 项目可能无法正常启动
+- 使用 npm 安装依赖，使用 cnpm 项目可能无法正常启动
 - 必须保留@dcloudio/uni-h5 依赖，否则项目将无法正常启动
 
 ```js
 // pages.json
 {
-  "name": "my-project",
+  "name": "try-uniapp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -97,20 +97,7 @@
 </html>
 ```
 
-## 5.暂不使用 typescript，改造 vue 文件
-
-- 删除 vue 文件中的 lang="ts"
-
-```js
-export default {
-  name: 'detail',
-  data(){
-    return {}
-  }
-},
-```
-
-## 6.自定义导航条
+## 5.自定义导航条
 
 - 当某些页面需要去掉导航条撑满全屏时使用，此时页面内元素会上移到顶部
 - 需要对导航条高度做适配处理
@@ -149,4 +136,10 @@ export default {
 </view>
 ```
 
-## 7.
+## 6.使用 vant weapp 组件库
+
+- 在 package.json 中添加 "postinstall": "bower install"和 bower 依赖
+- 新建.bowerrc，bower.json 文件
+- 在 pages.json 中使用 usingComponents 对组件进行引入
+- .gitignore 中添加 wxcomponents/
+- 当 npm i 时会自动生成 wxcomponents 文件夹

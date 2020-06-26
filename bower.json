@@ -1,0 +1,15 @@
+{
+  "name": "ktcc-miniapp-front",
+  "private": true,
+  "dependencies": {
+    "vant": "./node_modules/@vant/weapp/dist"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "wxcomponents",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
