@@ -1,6 +1,7 @@
 import axios from "axios";
 import adapter from "axios-miniprogram-adapter";
 
+console.log(process.env.NODE_ENV);
 const service = axios.create({
   baseURL: process.env.VUE_APP_BaseUrl,
   adapter,
