@@ -4,7 +4,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    login: false,
+    login: '7777',
   },
 });
 

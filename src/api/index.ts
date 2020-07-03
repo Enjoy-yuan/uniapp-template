@@ -2,7 +2,7 @@ import axios from "@/utils/axios";
 
 const api = {
   // 获取预约信息
-  getBookingInfo(data) {
+  getBookingInfo(data: any) {
     return axios({
       url: "/api/pm/rb/getBookingInfo",
       method: "post",

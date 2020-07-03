@@ -1,7 +1,12 @@
 @import "@/style/reset.scss";
 
-.aaa{
-  .bbb{
+.aaa {
+  .bbb {
     color: red;
   }
+}
+
+// 修改vant默认样式
+.van-cell::after {
+  left: 0 !important;
 }

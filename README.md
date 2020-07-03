@@ -131,11 +131,24 @@ export default {
 
 ## 8.使用 vuex
 
-- 新建文件夹 store，新建文件 index.js，在 main.js 中引入并挂载到 vue 上
+- 安装依赖 vuex-class
+- 新建文件夹 store，新建文件 index.ts，在 main.ts 中引入并挂载到 vue 上
 
 ```js
-// main.js
-import store from "./store";
+// main.ts
+import store from "@/store";
 
 Vue.prototype.$store = store;
+```
+
+## 9.typescript 使用
+
+- 在 vue 文件中引用组件时，用绝对路径会报找不到该组件的警告，可换成相对路径
+- 在引入 state 时必须带上!非空判断，不然会报错
+
+```js
+// 此时报警告
+import ShareCom from "@/components/ShareCom.vue";
+// 换成相对路径
+import ShareCom from "../../components/ShareCom.vue";
 ```
