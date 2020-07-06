@@ -119,6 +119,7 @@ export default {
 - .gitignore 中添加 wxcomponents/
 - 在 App.vue 中引入 vant weapp 内置样式 @import '/wxcomponents/vant/common/index.wxss';
 - 当 npm i 时会自动生成 wxcomponents 文件夹
+- 也可直接创建 wxcomponents 文件夹，将 vant weapp 组件手动拷贝进来
 
 ## 6.使用 scss
 
