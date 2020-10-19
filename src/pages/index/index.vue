@@ -27,7 +27,25 @@ export default {
             activeNames: ['1']
         }
     },
-    onLoad() {},
+    onLoad() {
+        this.$api
+            .getData({
+                method: 'get_token'
+            })
+            .then((res) => {
+                console.log(res)
+                this.$api
+                    .getData({
+                        "method": "get_all_securities",
+                        token: res,
+                        code: 'stock',
+                        date: '2019-01-15'
+                    })
+                    .then((res) => {
+                        console.log(res)
+                    })
+            })
+    },
     methods: {
         onChange(event) {
             console.log(event)

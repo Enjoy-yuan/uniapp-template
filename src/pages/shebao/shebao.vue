@@ -1,23 +1,20 @@
 <template>
-    <view class="content">
-       shebao
-    </view>
+  <div>
+shebao
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            title: 'Hello'
-        }
-    },
-    onLoad() {
+  data () {
+    return {
 
-	},
-    methods: {}
+    }
+  }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 
+ 
 </style>

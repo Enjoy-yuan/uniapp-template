@@ -22,10 +22,12 @@
 
 ## 5.使用 vant weapp
 
-- 组件压缩包[下载地址](https://github.com/youzan/vant-weapp)
+- 压缩包[下载地址](https://github.com/youzan/vant-weapp)
 - 在src下创建wxcomponents => vant文件夹，将dist下的组件拷贝进来
 - 在 pages.json 中使用 usingComponents 对组件进行引入
 - 在 App.vue 中引入内置样式 @import '/wxcomponents/vant/common/index.wxss'
 
+## 6.使用ucharts 
 
-
+- 压缩包[下载地址](https://ext.dcloud.net.cn/plugin?id=271)
+- [示例地址](http://doc.ucharts.cn/1172174)
