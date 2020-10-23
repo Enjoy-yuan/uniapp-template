@@ -1,6 +1,6 @@
 <template>
   <div>
-shebao
+<bar></bar>
   </div>
 </template>
 

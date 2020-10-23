@@ -51,6 +51,7 @@
         "navigationBarBackgroundColor": "#F8F8F8",
         "backgroundColor": "#F8F8F8",
         "usingComponents": {
+            "bar": "/wxcomponents/echarts-for-weixin/pages/bar",
             "van-action-sheet": "/wxcomponents/vant/action-sheet/index",
             "van-area": "/wxcomponents/vant/area/index",
             "van-button": "/wxcomponents/vant/button/index",
