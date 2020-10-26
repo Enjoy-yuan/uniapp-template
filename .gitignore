@@ -1,5 +1,4 @@
 .DS_Store
-node_modules/
 unpackage/
 dist/
 
@@ -21,3 +20,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+src/wxcomponents/echarts-for-weixin/pages

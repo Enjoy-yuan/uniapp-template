@@ -1,11 +1,15 @@
 <template>
   <div>
-<bar></bar>
+<Bar></Bar>
   </div>
 </template>
 
 <script>
+import Bar from "@/wxcomponents/echarts-for-weixin/components/bar"
 export default {
+    components: {
+        Bar
+    },
   data () {
     return {
 
@@ -15,6 +19,5 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-
  
 </style>

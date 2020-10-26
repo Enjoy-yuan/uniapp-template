@@ -31,13 +31,15 @@
 
 -   压缩包[下载地址](https://ext.dcloud.net.cn/plugin?id=271)
 -   [示例地址](http://doc.ucharts.cn/1172174)
+- 
 
 ## 7.使用 echarts
 
 -   压缩包[下载地址](https://github.com/ecomfe/echarts-for-weixin)
 -   微信小程序原生组件需要放置到 wxcomponents 文件夹内
 -   在 pages.json 中引入组件
--   必须添加全局样式
+-   保留ec-canvas和pages文件夹即可
+-   必须在项目中添加全局样式
 
 ```css
 /**app.wxss**/
