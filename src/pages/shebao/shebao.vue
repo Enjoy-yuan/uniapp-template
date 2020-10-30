@@ -1,6 +1,5 @@
 <template>
   <div>
-    888
 <Bar></Bar>
   </div>
 </template>
