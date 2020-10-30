@@ -39,7 +39,7 @@
 -   微信小程序原生组件需要放置到 wxcomponents 文件夹内
 -   在 pages.json 中引入组件
 -   保留ec-canvas和pages文件夹即可
--   必须在项目中添加全局样式
+-   必须在项目中合适位置添加样式
 
 ```css
 /**app.wxss**/
