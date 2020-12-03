@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import uCharts from '@/components/u-charts/u-charts.js'
+import uCharts from '@/static/u-charts/u-charts.min.js'
 var _self
 var canvaPie = null
 
