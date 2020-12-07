@@ -1,0 +1,5 @@
+<view>
+    我是原生微信小程序自定义组件
+    <view>{{fatherToChild}}</view>
+    <button bindtap='fn'>向父组件中传入参数</button>
+</view>

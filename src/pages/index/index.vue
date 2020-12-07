@@ -1,11 +1,9 @@
 <template>
   <view class="content">
     <navigator url="/packageA/list/index" class="navigator">去list页</navigator>
-    <van-button type="default">默认按钮</van-button>
     <van-button type="primary">主要按钮</van-button>
-    <van-button type="info">信息按钮</van-button>
-    <van-button type="warning">警告按钮</van-button>
-    <van-button type="danger">危险按钮</van-button>
+    <child fatherToChild="我是来自父组件的数据" @fn="fn"></child>
+    {{ childToFather }}
   </view>
 </template>
 
@@ -14,10 +12,16 @@ export default {
   data() {
     return {
       title: 'Hello',
-      activeNames: ['1']
+      activeNames: ['1'],
+      imgUrl: '../../static/img/logo.png',
+      childToFather: ''
     }
   },
   onLoad() {
+    // this.$api.getData2().then((res) => {
+    //   this.imgUrl = 'https://imgchr.com/i/Dbcdh9'
+    //   console.log(res[0].entrance_img)
+    // })
     this.$api
       .getData({
         method: 'get_token'
@@ -37,9 +41,9 @@ export default {
       })
   },
   methods: {
-    onChange(event) {
-    //   console.log(event)
-      this.activeNames = event.detail
+    fn(e) {
+      this.childToFather = e.detail.childToFather
+      console.log(e.detail.childToFather)
     }
   }
 }

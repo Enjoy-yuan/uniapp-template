@@ -129,7 +129,19 @@ if (process.env.NODE_ENV === 'development') {
 - 使用 vant 组件 大概占空间 1916 - 1579 = 337k，无论是否在 package.json 中引入都将占用空间，需移除 src 下的 wxcomponents 文件夹
 - dev 打包体积 1916k，使用 build 打包体积 1340k，预览 1450k
 
-## 13.问题记录
+## 13.注意点记录
 
 - 按官方教程自定义 tabbar 会闪屏
-- 使用 echarts-for-weixin 无法向原生小程序组件传参
+- 使用 echarts-for-weixin 时无法向原生小程序组件传参
+- 真机调试接口请求异常，需正确配置 ssl 证书
+- 原生微信小程序自定义组件必须放置在 wxcomponents 文件夹下，子组件向父组件传参通过 triggerEvent
+- uniapp 中无法使用构建 npm
+
+## 14.小程序项目难点
+
+- 图片的瀑布流
+- sku 产品多级选项联动
+
+## 15.创建本地服务
+
+- json-server --watch --port 53000 all.json

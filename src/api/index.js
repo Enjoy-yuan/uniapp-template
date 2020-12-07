@@ -14,6 +14,12 @@ const api = {
       method: 'post',
       data: { ...obj, ...data }
     })
+  },
+  getData2() {
+    return axios({
+      url: `http://localhost:53000/themes`,
+      method: 'get'
+    })
   }
 }
 export default api
