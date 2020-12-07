@@ -1,9 +1,6 @@
 <template>
   <view class="content">
-    <navigator url="/packageA/list/index" class="navigator">去list页</navigator>
-    <van-button type="primary">主要按钮</van-button>
-    <child fatherToChild="我是来自父组件的数据" @fn="fn"></child>
-    {{ childToFather }}
+    行情
   </view>
 </template>
 
@@ -13,8 +10,7 @@ export default {
     return {
       title: 'Hello',
       activeNames: ['1'],
-      imgUrl: '../../static/img/logo.png',
-      childToFather: ''
+      imgUrl: '../../static/img/logo.png'
     }
   },
   onLoad() {
@@ -40,12 +36,7 @@ export default {
           })
       })
   },
-  methods: {
-    fn(e) {
-      this.childToFather = e.detail.childToFather
-      console.log(e.detail.childToFather)
-    }
-  }
+  methods: {}
 }
 </script>
 

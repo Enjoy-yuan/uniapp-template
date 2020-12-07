@@ -6,7 +6,7 @@
 
 <script>
 //  force-use-old-canvas="true"
-import uniEcCanvas from '@/static/uni-ec-canvas/uni-ec-canvas'
+import uniEcCanvas from './uni-ec-canvas/uni-ec-canvas'
 export default {
   data() {
     return {

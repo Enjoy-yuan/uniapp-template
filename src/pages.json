@@ -1,13 +1,13 @@
 {
   "pages": [
     {
-      "path": "pages/index/index"
+      "path": "pages/market/index"
     },
     {
-      "path": "pages/echarts/index"
+      "path": "pages/consult/index"
     },
     {
-      "path": "pages/ucharts/index"
+      "path": "pages/optional/index"
     }
   ],
   "subpackages": [
@@ -16,6 +16,21 @@
       "pages": [
         {
           "path": "list/index"
+        },
+        {
+          "path": "echarts/index"
+        },
+        {
+          "path": "ucharts/index"
+        },
+        {
+          "path": "custom/index"
+        },
+        {
+          "path": "search/index"
+        },
+        {
+          "path": "waterFlow/index"
         }
       ]
     }
@@ -27,22 +42,22 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/market/index",
         "iconPath": "static/img/home-default@2x.png",
         "selectedIconPath": "static/img/home-click@2x.png",
-        "text": "index"
+        "text": "行情"
       },
       {
-        "pagePath": "pages/echarts/index",
+        "pagePath": "pages/optional/index",
         "iconPath": "static/img/security-default@2x.png",
         "selectedIconPath": "static/img/security-click@2x.png",
-        "text": "echarts"
+        "text": "自选"
       },
       {
-        "pagePath": "pages/ucharts/index",
+        "pagePath": "pages/consult/index",
         "iconPath": "static/img/person-default@2x.png",
         "selectedIconPath": "static/img/person-click@2x.png",
-        "text": "ucharts"
+        "text": "咨询"
       }
     ]
   },

@@ -94,6 +94,8 @@ if (process.env.NODE_ENV === 'development') {
 - 在 pages.json 中引入组件
 - 保留 ec-canvas 和 pages 文件夹即可
 - 必须在项目中合适位置添加样式
+- 弃用原因：只能作为页面 Page 来引入，但是项目一般需要的是自定义组件 Component，这样才能正常传参，改造成 vue 页面 onInit 函数无法传递，还会有一些其他的报错
+- [官方 issue](https://github.com/ecomfe/echarts-for-weixin/issues/572)
 
 ```css
 /**app.wxss**/
@@ -111,7 +113,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 ```
 
-## 11.直接使用 echarts-for-wx-uniapp
+## 11.使用 echarts-for-wx-uniapp
 
 - 压缩包[下载地址](https://github.com/Zhuyi731/echarts-for-wx-uniapp)
 - 将 uni-ec-canvas 文件夹拷贝到 static 目录下
@@ -136,12 +138,17 @@ if (process.env.NODE_ENV === 'development') {
 - 真机调试接口请求异常，需正确配置 ssl 证书
 - 原生微信小程序自定义组件必须放置在 wxcomponents 文件夹下，子组件向父组件传参通过 triggerEvent
 - uniapp 中无法使用构建 npm
+- 消除图片底部自带间距，使用 flex 布局
+- 设置背景色可以直接在 page 标签下设置
+- 类保存数据不能保存状态，new 出来的对象才可以保存状态
 
 ## 14.小程序项目难点
 
 - 图片的瀑布流
-- sku 产品多级选项联动
+- spu 是商品，sku 是单品 产品的多级选项联动
 
 ## 15.创建本地服务
 
 - json-server --watch --port 53000 all.json
+
+## 16
