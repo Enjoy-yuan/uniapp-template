@@ -141,6 +141,16 @@ if (process.env.NODE_ENV === 'development') {
 - 消除图片底部自带间距，使用 flex 布局
 - 设置背景色可以直接在 page 标签下设置
 - 类保存数据不能保存状态，new 出来的对象才可以保存状态
+- echarts 下柱状图背景色无法使用函数获取参数
+
+````js
+itemStyle: {
+  color: (arg) => {
+    console.log(arg)
+    return '#ccc'
+  }
+}
+```
 
 ## 14.小程序项目难点
 
@@ -152,3 +162,4 @@ if (process.env.NODE_ENV === 'development') {
 - json-server --watch --port 53000 all.json
 
 ## 16
+````

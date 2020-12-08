@@ -6,8 +6,9 @@ if (process.env.NODE_ENV === 'development') {
 } else {
   console.log('生产环境')
 }
+
 const service = axios.create({
-  baseURL: 'https://dataapi.joinquant.com/apis',
+  baseURL: 'https://wechat.agucha.com/api/v1',
   adapter
 })
 

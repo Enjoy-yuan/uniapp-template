@@ -1,51 +1,33 @@
 <template>
-  <view class="content">
-    行情
+  <view>
+    <opening></opening>
+    <scroll></scroll>
+    <overview></overview>
+    <global></global>
   </view>
 </template>
 
 <script>
+import opening from './components/opening'
+import scroll from './components/scroll'
+import overview from './components/overview'
+import global from './components/global'
 export default {
+  components: {
+    opening,
+    scroll,
+    overview,
+    global
+  },
   data() {
-    return {
-      title: 'Hello',
-      activeNames: ['1'],
-      imgUrl: '../../static/img/logo.png'
-    }
+    return {}
   },
-  onLoad() {
-    // this.$api.getData2().then((res) => {
-    //   this.imgUrl = 'https://imgchr.com/i/Dbcdh9'
-    //   console.log(res[0].entrance_img)
-    // })
-    this.$api
-      .getData({
-        method: 'get_token'
-      })
-      .then((res) => {
-        // console.log(res)
-        this.$api
-          .getData({
-            method: 'get_all_securities',
-            token: res,
-            code: 'stock',
-            date: '2019-01-15'
-          })
-          .then((res) => {
-            // console.log(res)
-          })
-      })
-  },
-  methods: {}
+  onLoad(){
+    // this.$api.getStatus()
+    // this.$api.getData()
+
+  }
 }
 </script>
 
-<style lang="scss" scoped>
-.content {
-  .logo {
-    height: 700rpx;
-    width: 750rpx;
-    background-color: $uni-color-primary;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

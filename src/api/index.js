@@ -1,23 +1,35 @@
 import axios from '@/utils/axios'
 
 // https://dataapi.joinquant.com/docs#welcome-to-jqdata-apidoc
-// 账号密码
-const obj = {
-  mob: '13733443259',
-  pwd: '443259'
-}
 
 const api = {
-  // 获取预约信息
-  getData(data) {
+  // 开盘状态
+  getStatus() {
     return axios({
-      method: 'post',
-      data: { ...obj, ...data }
+      url: `/agucha/t-market-status/status`,
+      method: 'get'
     })
   },
-  getData2() {
+
+  // 大盘指数，type为1查全球，不传或0查国内
+  getIndexInfo(date) {
     return axios({
-      url: `http://localhost:53000/themes`,
+      url: `/agucha/t-market-index1-d/queryLatestIndexInfo/${date}`,
+      method: 'get'
+    })
+  },
+
+  // 涨跌分布
+  getDistribute(date) {
+    return axios({
+      url: `/agucha/t-stock-pchange-distribute/${date}`,
+      method: 'get'
+    })
+  },
+  // 获取预约信息
+  getData() {
+    return axios({
+      url: `/agucha/industry/queryIndustryOnDay/20201029`,
       method: 'get'
     })
   }

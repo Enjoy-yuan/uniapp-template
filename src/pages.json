@@ -36,37 +36,36 @@
     }
   ],
   "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "color": "#999999",
+    "selectedColor": "#DFB17F",
     "borderStyle": "black",
-    "backgroundColor": "#ffffff",
+    "backgroundColor": "#131D55",
     "list": [
       {
         "pagePath": "pages/market/index",
-        "iconPath": "static/img/home-default@2x.png",
-        "selectedIconPath": "static/img/home-click@2x.png",
+        "iconPath": "static/img/tabbar/market_unclick.png",
+        "selectedIconPath": "static/img/tabbar/market_click.png",
         "text": "行情"
       },
       {
         "pagePath": "pages/optional/index",
-        "iconPath": "static/img/security-default@2x.png",
-        "selectedIconPath": "static/img/security-click@2x.png",
+        "iconPath": "static/img/tabbar/optional_unclick.png",
+        "selectedIconPath": "static/img/tabbar/optional_click.png",
         "text": "自选"
       },
       {
         "pagePath": "pages/consult/index",
-        "iconPath": "static/img/person-default@2x.png",
-        "selectedIconPath": "static/img/person-click@2x.png",
+        "iconPath": "static/img/tabbar/consult_unclick.png",
+        "selectedIconPath": "static/img/tabbar/consult_click.png",
         "text": "咨询"
       }
     ]
   },
   "globalStyle": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "A股查",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
-
+    "navigationBarBackgroundColor": "#131D55",
+    "backgroundColor": "#131D55",
     "usingComponents": {
       "child": "/wxcomponents/child/child",
       "van-action-sheet": "/wxcomponents/vant/action-sheet/index",
