@@ -5,12 +5,12 @@
         <view class="name">{{ item.name }}</view>
         <view class="number">{{ item.close }}</view>
         <view class="rise">
-          <text>{{item.pctChange}}</text>
-          <text>{{item.pctChange}}%</text>
+          <text>{{ item.pctChange }}</text>
+          <text>{{ item.pctChange }}%</text>
         </view>
         <view class="money">
-          <text>{{(item.money/100000000).toFixed(0)}}亿</text>
-          <text>预:{{(item.money/100000000).toFixed(0)}}亿</text>
+          <text>{{ (item.money / 100000000).toFixed(0) }}亿</text>
+          <text>预:{{ (item.money / 100000000).toFixed(0) }}亿</text>
         </view>
       </view>
     </scroll-view>
@@ -25,7 +25,7 @@ export default {
     }
   },
   async created() {
-    this.indexInfo = (await this.$api.getIndexInfo('20201105')).data
+    this.indexInfo = (await this.$api.getIndexInfo('20201105', 0)).data
   }
 }
 </script>
@@ -47,8 +47,6 @@ export default {
     border-radius: 12rpx;
     box-sizing: border-box;
     overflow: hidden;
-    .name {
-    }
     .number {
       color: #e73131;
       font-size: 32rpx;

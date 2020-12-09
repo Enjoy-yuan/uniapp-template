@@ -12,9 +12,9 @@ const api = {
   },
 
   // 大盘指数，type为1查全球，不传或0查国内
-  getIndexInfo(date) {
+  getIndexInfo(date,type) {
     return axios({
-      url: `/agucha/t-market-index1-d/queryLatestIndexInfo/${date}`,
+      url: `/agucha/t-market-index1-d/queryLatestIndexInfo/${date}?type=${type}`,
       method: 'get'
     })
   },
@@ -26,11 +26,22 @@ const api = {
       method: 'get'
     })
   },
-  // 获取预约信息
-  getData() {
+  // 概念
+  getConcept(date) {
     return axios({
-      url: `/agucha/industry/queryIndustryOnDay/20201029`,
-      method: 'get'
+      url: `/agucha/t-market-concept/queryConceptOnDay/${date}`,
+    })
+  },
+  // 行业
+  getIndustry(date) {
+    return axios({
+      url: `/agucha/industry/queryIndustryOnDay/${date}`,
+    })
+  },
+  // 板块
+  getArea(date) {
+    return axios({
+      url: `/agucha/t-market-area/queryAreaOnDay/${date}`,
     })
   }
 }

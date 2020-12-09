@@ -22,10 +22,9 @@ export default {
   data() {
     return {}
   },
-  onLoad(){
+  onLoad() {
     // this.$api.getStatus()
     // this.$api.getData()
-
   }
 }
 </script>

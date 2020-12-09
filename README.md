@@ -134,21 +134,43 @@ if (process.env.NODE_ENV === 'development') {
 ## 13.注意点记录
 
 - 按官方教程自定义 tabbar 会闪屏
-- 使用 echarts-for-weixin 时无法向原生小程序组件传参
+- 使用 echarts-for-weixin 时,由于 demo 是页面不是组件，因此无法向原生微信小程序组件传参
 - 真机调试接口请求异常，需正确配置 ssl 证书
 - 原生微信小程序自定义组件必须放置在 wxcomponents 文件夹下，子组件向父组件传参通过 triggerEvent
 - uniapp 中无法使用构建 npm
 - 消除图片底部自带间距，使用 flex 布局
 - 设置背景色可以直接在 page 标签下设置
 - 类保存数据不能保存状态，new 出来的对象才可以保存状态
-- echarts 下柱状图背景色无法使用函数获取参数
+- echarts 无法使用函数获取参数，如color，tooltip，label等
+- echarts 无法在 tabs 未激活的 tab 下使用 echarts，display:none;失效
 
 ````js
+// 无法使用函数获取参数
 itemStyle: {
-  color: (arg) => {
-    console.log(arg)
-    return '#ccc'
+  color: (info) => {
+    console.log(info)
   }
+}
+tooltip: {
+  formatter: (info)=>{
+    console.log(info)
+  }
+}
+label: {
+  normal: {
+    formatter: (info)=>{
+      console.log(info)
+    }
+  }
+}
+
+// 必须始终保持echarts的存在
+.display {
+  /* display: none; */
+  /* 兼容echarts的显示和隐藏 */
+  position: absolute;
+  top: -9999rpx;
+  left: -9999rpx;
 }
 ```
 

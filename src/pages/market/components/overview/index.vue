@@ -121,7 +121,7 @@ export default {
             },
             barWidth: 16,
             itemStyle: {
-              color: '#E73131'
+              color: "#E73131"
               // barBorderRadius: [8, 8, 0, 0]
               // color: {
               //   type: 'linear',
@@ -219,7 +219,7 @@ export default {
     .homes-line {
       display: flex;
       justify-content: space-between;
-      line-height: 30rpx;
+      line-height: 40rpx;
       .homes-item {
         display: flex;
         justify-content: space-between;
