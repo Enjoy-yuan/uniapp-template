@@ -17,15 +17,24 @@ export default {
       ec: {
         option: {
           tooltip: {
-            show: true
+            show: true,
+            formatter: '{b0}: {c0}'
           },
+          // visualMap: {
+          //   show: true,
+          //   min: 10,
+          //   max: 50,
+          //   inRange: {
+          //     color: ['#b71c1c', '#ffebee']
+          //   }
+          // },
           series: [
             {
               name: '概念',
               type: 'treemap',
               breadcrumb: false,
-              roam: false,
-              nodeClick: false,
+              roam: false, // 可拖拽漫游
+              nodeClick: false, // 可点击
               width: '100%',
               itemStyle: {
                 normal: {
@@ -33,7 +42,12 @@ export default {
                 }
               },
               data: [],
-              color: ['#FFA54F']
+              color: ['#FFA54F'],
+              label: {
+                normal: {
+                  formatter: '{b0}: {c0}'
+                }
+              }
             }
           ]
         }

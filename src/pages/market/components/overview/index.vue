@@ -12,7 +12,7 @@
       </view>
       <view class="up-number">846</view>
     </view>
-    <uni-ec-canvas class="uni-ec-canvas" :ec="ec" force-use-old-canvas="true"></uni-ec-canvas>
+    <uni-ec-canvas class="uni-ec-canvas" :ec="ec"></uni-ec-canvas>
     <div class="homes">
       <view class="homes-line">
         <view class="homes-item">
@@ -121,7 +121,7 @@ export default {
             },
             barWidth: 16,
             itemStyle: {
-              color: "#E73131"
+              color: '#E73131'
               // barBorderRadius: [8, 8, 0, 0]
               // color: {
               //   type: 'linear',
